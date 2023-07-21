@@ -1,0 +1,44 @@
+DROP TABLE IF EXISTS digital_member;
+CREATE TABLE IF NOT EXISTS digital_member(
+	u_num INT primary key auto_increment, 	-- 회원번호
+	u_id VARCHAR(30) unique,			  	-- 회원아이디
+	u_pass VARCHAR(30) NOT NULL,			-- 비밀번호
+	u_age int,								-- 나이
+	u_gender VARCHAR(10), 				    -- 성별
+	u_join char(1) default 'Y',				-- 회원탈퇴 여부 Y == 가입상태
+	u_regdate TIMESTAMP default now() 		-- 회원가입일	 
+);
+
+-- 회원 가입 시
+INSERT INTO digital_member(u_id,u_pass,u_age,u_gender) 
+VALUES('admin', 'admin' , 20, 'male');
+
+-- 회원탈퇴 시
+-- UPDATE digital_member SET u_join = 'N' WHERE u_num = 회원번호;
+commit;
+
+-- 관리자가 아니고 탈퇴한 회원이 아닌 정보 출력
+SELECT count(*) AS count FROM digital_member WHERE u_join = 'Y'
+WHERE u_id != 'admin' AND u_join = 'Y' 
+ORDER BY u_num DESC
+
+SELECT * FROM digital_member;
+
+DELETE FROM digital_member
+
+select count(*) FROM digital_member
+
+/*
+ * 공지형 게시판 테이블
+ */
+
+CREATE TABLE IF NOT EXISTS notice_board(
+	notice_num INT PRIMARY KEY AUTO_INCREMENT,		-- 공지 번호
+	notice_category VARCHAR(20) NOT NULL,			-- 공지 분류
+	notice_author VARCHAR(50)	NOT NULL,			-- 작성자
+	notice_title VARCHAR(50)	NOT NULL,			-- 제목
+	notice_content TEXT NOT NULL,					-- 내용
+	notice_date TIMESTAMP DEFAULT now()				-- 작성 시간
+);
+
+DESC notice_board

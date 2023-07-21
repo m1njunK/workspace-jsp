@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;16_database_mysql/src/main/webapp/insertFrom.jsp&apos; to &apos;insertForm.jsp&apos;" description="Rename resource &apos;insertFrom.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/insertFrom.jsp" name="insertForm.jsp" stamp="1688696163516" updateReferences="true"/>
+</session>

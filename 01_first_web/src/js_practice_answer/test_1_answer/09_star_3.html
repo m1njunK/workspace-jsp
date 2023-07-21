@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>별 출력하기3</title>
+</head>
+<body>
+<script>
+    var size = prompt("가로길이를 입력하세요!");
+    
+    document.write("=====================<br/>");
+
+    for (var i = 0; i < size; i++) {
+        for (var j = 0; j < i + 1; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    
+    for (var i = 0; i < size - 1; i++) {
+        for (var j = size - 1; j > i; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+    document.write("=====================<br/>");
+    
+    document.write("*" + "<br/>");
+    document.write("**" + "<br/>");
+    document.write("***" + "<br/>");
+    document.write("****" + "<br/>");
+    document.write("*****" + "<br/>");
+    document.write("****" + "<br/>");
+    document.write("***" + "<br/>");
+    document.write("**" + "<br/>");
+    document.write("*" + "<br/>");
+
+    document.write("=====================<br/>");
+
+    for (var i = 0; i < size; i++) {
+        for (var j = 0; j < i + 1; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+
+    for (var i = size-1; i > 0; i--) {
+        for (var j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+    
+    input = size;
+    document.write("=======================<br/>");
+    // 짝수면 홀수로 바꿔줌
+    input = (input % 2 == 0) ? input - 1 : input ;
+    // var input = prompt("라인수를 입력하세요");
+    
+    for (var i = 0; i < input; i++) {
+        if (i < size / 2) {
+            for (var j = 0; j < i + 1; j++) {
+                document.write("*");
+            }
+        } else {
+            for (var j = 0; j < input - i; j++) {
+                document.write("*");
+            }
+        }
+        document.write("<br/>");
+    }
+    
+     document.write("=======================<br/>");
+
+    // var input = prompt("라인수를 입력하세요");
+    
+    // 전체 라인 개수 계산
+    
+    var max = size * 2 - 1; // 곱하기 2하면 모두 짝수 -1 해서 홀수로 변경
+    
+    for (var i = 0; i < max; i++) {
+        if (i < size) {
+            for (var j = 0; j < i + 1; j++) {
+                document.write("*");
+            }
+        } else {
+            console.log(max - i);
+            for (var j = 1; j < max - i ; j++) {
+                console.log(j);
+                document.write("*");
+            }
+        }
+        document.write("<br/>");
+    }
+
+</script>
+</body>
+</html>

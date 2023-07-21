@@ -1,0 +1,26 @@
+<!-- webapp/js/hoisting.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	console.log(sample3());
+	console.log(sample2);
+	console.log(sample);
+	
+	sample = "text plain";
+	var sample;
+	
+	function sample3(){
+		return "call sample()";
+	}
+	
+	var sample2 = "text plain2";
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+package vo;
+
+/**
+ * 질문과 답변 게시글 정보를 저장할 Bean class
+ */
+public class QnABoardVO {
+	
+}

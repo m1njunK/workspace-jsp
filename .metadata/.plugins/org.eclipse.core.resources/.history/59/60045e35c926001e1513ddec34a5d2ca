@@ -1,0 +1,28 @@
+package service;
+
+import java.util.ArrayList;
+
+import beans.MemberVO;
+import jakarta.servlet.http.HttpServletRequest;
+
+public class ManagementServiceImpl implements ManagementService {
+
+	@Override
+	public ArrayList<MemberVO> getMemberList(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateMember(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteMember(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

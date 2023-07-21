@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>3의 배수 구하기</title>
+</head>
+<body>
+<script>
+
+    var input = prompt("숫자를 입력해 주세요!");
+    if (input % 3 == 0) {
+        document.write(input + "은(는) 3의 배수 입니다.");
+    } else {
+        document.write(input + "은(는) 3의 배수가 아닙니다.");
+    }
+    
+    let isRun = true;
+
+    while (isRun) {
+        let answer = "숫자를 입력해 주세요!";
+        var input = prompt(answer);
+        console.log(input)
+        if(input == null){  // 취소 시
+            answer = "취소되었습니다 종료합니다.";
+            //break;
+            isRun = false;
+        }
+        input = input.trim();
+        if ( input == "" || isNaN(input)) {
+        // trim 좌우 공백 제거
+        // isNaN Not A Number 수치가 아니면 true
+            answer = "숫자가 아닙니다. 종료합니다.";
+            // break;
+            isRun = false;
+        } else if (input % 3 == 0) {
+           answer = input + "은(는) 3의 배수 입니다.";
+        } else {
+            answer = input + "은(는) 3의 배수가 아닙니다.";
+        }
+        alert(answer);
+    }
+</script>
+</body>
+</html>

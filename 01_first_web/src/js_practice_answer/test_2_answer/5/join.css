@@ -1,0 +1,27 @@
+article{
+    width:400px;
+    margin:0 auto;
+    text-align:center;
+    border:1px solid black;
+}
+
+article table{
+    width:100%;
+}
+
+article table tr td:first-child{
+    text-align:right;
+}
+
+article table tr th{
+    height:80px;
+    font-size:2em;
+}
+
+article table tr:last-child td{
+    text-align:center;
+}
+
+article table tr td{
+    height:40px;
+}

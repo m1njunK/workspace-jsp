@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>숫자 찾기!</title>
+</head>
+<body>
+<script>
+    var isRun = true;
+    //var guess = 30;
+    // Math.floor 소수점 이하를 버림한다.
+    // 주어진 수 이하의 가장 큰 정수. -6.9999 는 6 // 5.99999 는 5
+    var guess = Math.floor(Math.random() * 100)+1; 
+    guess = parseInt(Math.random() * 100)+1;
+    console.log(guess);
+    var result = "";
+    var count = 0;
+
+    while (isRun) {
+        count++;
+        var input = prompt("1~100까지의 정수를 입력해주세요.");
+        if (input == guess) {
+            result = "성공입니다. ";
+            isRun = false;
+        } else if (input < guess) {
+            result = "낮습니다.";
+        } else {
+            result = "높습니다.";
+        }
+        alert(result+" 추측횟수 : " + count);
+    }
+    
+    
+  /*  for(count = 1; ;count++){
+        var input = prompt("1~100까지의 정수를 입력해주세요.");
+        if (input == guess) {
+            result = "성공입니다. ";
+            alert(result+" 추측횟수 : " + count);
+            break;
+        } else if (input < guess) {
+            result = "낮습니다.";
+        } else {
+            result = "높습니다.";
+        }
+        alert(result+" 추측횟수 : " + count);
+    }*/
+    
+
+</script>

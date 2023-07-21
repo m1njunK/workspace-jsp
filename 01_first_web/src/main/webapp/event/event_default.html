@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function query(){
+		let answer = window.confirm("naver로 이동하시겠습니까?");
+		return answer;
+	};
+	
+	function noAction(event){
+		event.preventDefault();
+	}
+</script>
+</head>
+<body>
+	<a onclick="return query()" href="https://www.naver.com">네이버로 페이지 이동</a>
+	<hr/>
+	<a id="naver" href="https://www.naver.com">네이버로 페이지 이동</a>
+	<hr/>
+	<form name="myForm" action="https://naver.com" method="GET";>
+		<input type="checkbox" name="eat" value="빵" onclick="noAction(event)"/> 빵 <br/>
+		<input type="checkbox" name="eat" value="술"/> 술 <br/>
+		<input type="submit" value="전송"/> <br/>	
+		<input type="button" id="btn" value="확인전송"/>
+	</form>
+	
+	<script>
+		document.getElementById("naver").onclick = (e)=>{
+			// 발생한 기본 이벤트 무시
+			e.preventDefault();
+		};
+		
+		document.myForm.onsubmit = ()=>{
+			alert('submit 발생');
+			return false;
+		};
+		
+		document.getElementById("btn").onclick = ()=>{
+			document.myForm.submit();
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<style>
+    div{
+        text-align: center;
+        border: 1px solid black;
+        width: 400px;
+    }
+    input{
+        margin: 5px;
+    }
+
+    form{
+        display: inline-block;
+        text-align: center;
+    }
+
+    #div1{
+        margin-right: 30px;
+        margin-left: -40px;
+        display: inline-block;
+        width: 150px;
+        border: none;
+        text-align: right;
+    }
+    #div2{
+        margin-top: 5px;
+        display: inline-block;
+        border: none;
+    }
+
+    #submit1{
+        width: 80px;
+        margin-right: -2px;
+    }
+
+    #submit2{
+        width: 100px;
+    }
+</style>
+<script>
+</script>
+</head>
+
+<body>
+    <div>
+        <h1>회원가입</h1>
+    <form name="form" id="frm">
+        <div id="div1">아이디</div> <input type="text" name="userId" id="userId"  /><br />
+        <div id="div1">비밀번호</div> <input type="password" name="userPw" id="userPw"><br />
+        <div id="div1">비밀번호 확인</div> <input type="password" name="userPwCon" id="userPwCon"><br />
+        <div id="div1">생년월일</div> <input type="text" name="birthday" id="birthday"><br />
+        <div id="div1">이름</div> <input type="text" name="userName" id="userName"><br />
+        <div id="div1">전화번호</div> <input type="tel" name="userPh" id="userPh"><br />
+        <div id="div2">
+            <input id="submit1" type="submit" value="회원가입" />
+            <input id="submit2" type="submit" value="회원정보수정" />
+        </div>
+    </form>
+    </div>
+    <script>
+    $(function(){
+        $("#frm").submit(function(){
+          if($("#userId").val().trim() == ""){
+            alert("아이디를 입력하세요.");
+            $("#userId").focus();
+            return false;
+          }
+          if($("#userPw").val().trim() == ""){
+            alert("비밀번호를 입력하세요.");
+            $("#userPw").focus();
+            return false;
+          }
+          if($("#userPwCon").val() != $("#userPw").val()){
+            alert("비밀번호가 일치하지 않습니다.");
+            $("#userPwCon").focus();
+            return false;
+          }
+          if($("#birthday").val().trim() == ""){
+            alert("생년월일을 입력하세요.");
+            $("#birthday").focus();
+            return false;
+          }
+          if($("#userName").val().trim() == ""){
+            alert("이름을 입력하세요.");
+            $("#userName").focus();
+            return false;
+          }
+          if($("#userPh").val().trim() == ""){
+            alert("전화번호를 입력하세요.");
+            $("#userPh").focus();
+            return false;
+          }
+        });
+      });
+    </script>
+</body>
+</html>

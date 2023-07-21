@@ -1,0 +1,16 @@
+package util;
+/**
+ * 검색 기능이 추가된
+ * 기준 class
+ */
+public class SearchCriteria extends Criteria{
+	/**
+	 * 검색 키워드 타입
+	 */
+	private String searchType;
+	/**
+	 * 검색 키워드
+	 */
+	private String searchValue;
+	
+}

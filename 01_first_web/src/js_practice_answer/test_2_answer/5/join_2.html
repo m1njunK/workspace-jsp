@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입l</title>
+<link rel="stylesheet" href="./join.css">
+<script>
+	window.onload = function(){
+		var bool = false;
+
+		var input = document.getElementsByTagName("input");
+		var upw = document.getElementById("upw");
+		var repw = document.getElementById("repw");
+		var acceptBtn = document.getElementById("acceptBtn");
+
+		acceptBtn.addEventListener("click",function(){
+			// console.log("input tag 개수 : "+input.length);
+			for(var i=0; i<input.length; i++){
+				if(input[i].value == ""){
+					alert(input[i].alt+"를 확인해주세요!");
+					input[i].focus();
+					return;
+				}
+			}
+
+			if(bool && upw.value != repw.value){
+				alert('비밀번호가 일치하지않습니다.');
+				upw.value="";
+				repw.value="";
+				upw.focus();
+				return;
+			}
+			alert('회원가입 완료');
+		});
+	}
+</script>
+</head>
+<body>
+	<article>
+		<form>
+			<table>
+				<tr>
+					<th colspan=2>회원가입</th>
+				</tr>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="uid" alt="아이디"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="upw"  alt="비밀번호"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호확인</td>
+					<td><input type="password" id="repw" alt="비밀번호확인"/></td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><input type="text" alt="생년월일"/></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" alt="이름"/></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type="text" alt="전화번호"/></td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<input type="button" id="acceptBtn" value="회원가입"/>
+						<input type="button" onclick="location.href='../2/update.html'" value="회원정보수정"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</article>
+</body>
+</html>

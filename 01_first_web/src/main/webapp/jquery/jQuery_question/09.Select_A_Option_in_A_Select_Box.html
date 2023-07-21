@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	/**
+	 * 시점 : run button click 시
+	 * 대상 : div#target 내부 select tag 요소
+	 * 기능 : 마지막 item 선택 
+	 * 함수 : prop(), last()
+	 */
+	$(function(){
+		$("input[type='button']").click(function(){
+			// 선택된 요소들 중 마지막 요소 last()
+			$('#target select option').last().prop('selected',true);
+			// 선택된 요소들 중 첫번째 요소 first()
+			// $('#target select option').first().attr('selected',true);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<div id="target"
+		style="color: rgb(255, 255, 255); width: 140px; height: 100px; float: left; border: 1px solid rgb(34, 34, 34); background-color: rgb(245, 222, 179); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">
+		#target<br>
+		<select size="4" data-role="none"
+			style="margin: 5px; color: rgb(34, 34, 34);">
+			<option>first</option>
+			<option>second</option>
+			<option>third(select me!)</option>
+		</select>
+	</div>
+	<input type="button" value="run"/>
+</body>
+</html>

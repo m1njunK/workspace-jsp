@@ -1,0 +1,26 @@
+<%@page import="java.sql.SQLException"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="s" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<f:requestEncoding value="UTF-8"/>
+	${param.id}-${param.pass}-${param.name} <br />
+	${param.addr}-${param.gender}-${param.age}-${param.phone} <br /> <hr />
+<c:catch var="e">
+	<%=
+		ㄴ
+	%>
+</c:catch>
+<c:if test="${!empty e}">
+	에러메세지 : <c:out value="${e.getMessage()}"/>
+</c:if>
+</body>
+</html>

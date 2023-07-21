@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	/**
+	 * 시점 : run button click 시
+	 * 대상 : div#parent1 내부 div#child
+	 * 기능 : parent1의 child를 parent2로 이동 
+	 * 함수 : appendTo() or append()
+	 */
+	 window.onload = ()=>{
+		 document.querySelector("input[value='run']").onclick = () => {
+			 let child = document.getElementById("child");
+			 document.getElementById("parent2").appendChild(child);
+		 }
+	 }
+
+</script>
+
+</head>
+
+<body>
+	<div id="parent1"
+		style="color: rgb(255, 255, 255); width: 150px; height: 100px; float: left; border: 1px solid rgb(34, 34, 34); background-color: rgb(34, 139, 34); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">
+		#parent1
+		<div id="child"
+			style="color: rgb(51, 51, 51); background-color: rgb(238, 238, 238); margin: 5px; height: 60px; padding: 5px; border: 1px solid rgb(34, 34, 34); background-position: initial initial; background-repeat: initial initial;">#child</div>
+	</div>
+	<div id="parent2"
+		style="color: rgb(255, 255, 255); width: 150px; height: 100px; float: left; border: 1px solid rgb(34, 34, 34); background-color: rgb(210, 180, 140); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">#parent2</div>
+	<input type="button" value="run" />
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		// button 태그 요소에 click event가 발생 하면 실행될 함수
+		$("button").click(function(){
+			let value = $("#dog").attr("src");
+			alert(value);
+			setTimeout(function(){
+				$("img").prop("src","img/pome.png");	
+			},1000);	
+		});
+		
+		$("#propValue").click(function(){
+			let value = $("#dog").prop("src");
+			alert(value);
+		});
+		
+		$("#dog").click(function(){
+			$(this).attr("src","img/rice.png");
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="img/poodle.png" alt="강아지" id="dog" width="120" height="100"/>
+	<button>attr 출력</button>
+	<button id="propValue">prop 출력</button>
+</body>
+</html>

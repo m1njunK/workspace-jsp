@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+	#box{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		
+		animation: 2000ms myAnim;
+		/*
+			animation-name: myAnim;
+			animation-duration: 50ms;
+		*/
+		animation-iteration-count: infinite;
+		/* 기본값 : 천천히 시작 빨라졌다가 마지막에 다시 느려짐 */
+		animation-timing-function: ease;		
+		/* 
+			animation 효과 진행 방향
+			normal : 정해진 순서대로 진행 0 ~ 100
+			reverse : 정해진 순서 반대로 진행 100~0
+			alternate : 정해진 순서대로 진행 했다가 반대로 진행
+			alternate-reverse : 반대로 진행 했다가 정해진 순서대로 진행
+		*/
+		animation-direction: normal;
+		animation-delay: 1s;
+	}
+	
+	@keyframes myAnim{
+		0%{
+			transform: rotate3d(1,1,1,1800deg);
+			left: 0px;		
+		}
+		
+		25%{
+			left:100px;
+		}
+		
+		50%{
+			left:200px;
+		}
+
+		75%{
+			left: 100px;
+		}
+		
+		100%{
+			left: 0px;
+		}
+	}
+</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

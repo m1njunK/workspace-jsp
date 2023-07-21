@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		$("#box").css({
+			width : '500px',
+			height : '100px',
+			backgroundColor : 'pink',
+			boxShadow : 'black 1px 1px',
+			borderRadius : '0 50px 50px 0'
+		});
+		
+		$("#box").hover(function(){
+			$("#box").css("background-color","black");
+		},function(){
+			$("#box").css("background-color","yellow");
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- context.xml -->
+<Context>
+	<Resource 
+		name="java/MySQLDB" 
+	    auth="container"
+	    type="javax.sql.DataSource"
+	    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/digital_jsp"
+		username="digital"
+		password="12345"
+		maxActive="200"
+		maxIdle="100"
+		minIdle="10"
+		maxWait="600000" />
+		
+		<!-- 
+			maxActive 동시에 사용할 수 있는 최대 커넥션 개수(기본값 : 8)
+			maxIdle 커넥션 풀에 반납할때 최대로 유지될 수 있는 커넥션 개수(기본값 : 8)
+			minIdle 최소한으로 유지할 커넥션 개수(기본값 : 0)
+			maxWait (millis) 할당받을 Connection 객체가 없을 때 스레드를 블럭시킬 시간
+		 -->
+</Context>

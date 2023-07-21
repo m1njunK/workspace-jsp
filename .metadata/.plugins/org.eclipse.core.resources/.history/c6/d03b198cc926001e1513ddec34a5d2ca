@@ -1,0 +1,34 @@
+package repositories;
+
+import java.util.ArrayList;
+
+import beans.MemberVO;
+import util.Criteria;
+
+public class ManagementDAOImpl implements ManagementDAO {
+
+	@Override
+	public ArrayList<MemberVO> getMemberList(Criteria cri) {
+		
+		return null;
+	}
+
+	@Override
+	public int getMemberTotalCount() {
+
+		return 0;
+	}
+
+	@Override
+	public int updateMember(MemberVO vo) {
+
+		return 0;
+	}
+
+	@Override
+	public int deleteMember(int num) {
+
+		return 0;
+	}
+
+}

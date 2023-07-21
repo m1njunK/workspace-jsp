@@ -1,0 +1,15 @@
+package vo;
+
+import java.util.Date;
+
+/**
+ * 공지형 게시물 정보를 저장하는 class
+ */
+public class NoticeVO {
+	private int notice_num;
+	private String notice_category;
+	private String notice_author;
+	private String notice_title;
+	private String notice_content;
+	private Date notice_date;	
+}

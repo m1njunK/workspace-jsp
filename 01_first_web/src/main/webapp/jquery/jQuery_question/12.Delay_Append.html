@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Delay Append</title>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	/**
+	 * 시점 : run button click 시
+	 * 대상 : div#target 
+	 * 기능 : 3초 경과 후 문자열 삽입 
+	 * 함수 : setTimeout(), append() or text() or html()
+	 */
+	 
+	$(function(){
+		$("[value='run']").click(function(){
+			// setTimeout(실행할 기능-함수, 지연시간ms);
+			window.setTimeout(()=>{
+				let isChecked = confirm("변경하시겠습니까?");
+				console.log(isChecked);
+				if(isChecked){
+					let str = '<b>문자열 삽입<br></b>'
+					// $('#target').append(str);
+					// $('#target').text(str);
+					$('#target').html(str);
+				} else{
+					alert("꺼져");
+				}
+			}, 3000);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<div id="target"
+		style="color: rgb(68, 68, 68); width: 150px; height: 190px; float: left; border: 1px solid rgb(170, 170, 170); background-color: rgb(230, 230, 250); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">
+		#target<br>
+	</div>
+	<input type="button" value="run" id="btn"  />
+</body>
+</html>

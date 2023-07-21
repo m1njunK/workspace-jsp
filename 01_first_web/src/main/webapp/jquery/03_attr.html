@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		$("img").attr("src","img/pome.png");
+		$("img").attr("alt","강아지 그림");
+		$("img").attr("width","100");
+		// JSON {key : value, key : value, ...}
+		$("img").attr({
+			alt : "강아지",
+			src : "img/poodle.png",
+			width : 120,
+			height : 100
+		});
+		
+		let obj = {
+			width : 100,
+			height : 100,
+			backgroundColor : "darkblue",
+			margin : 10,
+			float : "left"
+		}
+		
+		$(".box").css(obj);
+		
+	});
+</script>
+</head>
+<body>
+	<img />
+	<img />
+	<img />
+	<div>dummy</div>
+	<!-- div.box*3 -->
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>

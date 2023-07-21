@@ -1,0 +1,37 @@
+<!-- webapp/js/variable.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 변수 선언
+	// var : global
+	// let : local
+	// const : constant
+	
+	temp = "천재"; // var
+	console.log(temp);
+	var temp = "최기근";
+	console.log(temp);
+	
+	let temp2 = "김판걸";
+	temp2 = "최기근";
+	{
+		var tempGlobal = "global variable";
+		let tempLocal = "local variable"; // 밖에서 사용 불가
+	}
+	
+	console.log(tempGlobal);
+	// console.log(tempLocal);
+		
+	const pi = 3.141592;
+	console.log(pi);
+	// pi = 3.14; // const == 상수, 재할당 불가
+		
+</script>
+</head>
+<body>
+	
+</body>
+</html>

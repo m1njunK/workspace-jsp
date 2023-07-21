@@ -1,0 +1,110 @@
+<!-- css_8_flex/css_display_flex.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>FLEX</title>
+    <!-- https://flexboxfroggy.com/#ko -->
+    <style>
+        *{
+            height:100%;
+        }
+        .wrapper{
+            height:100%;
+            background-color:#cccccc;
+            display:flex;
+            /* 어떤 축을 기준으로 아이템을 배치 할지 결정하는 속성
+            row, column, column-reverse, row-reverse
+            */
+            flex-direction: row;
+            flex-direction: column-reverse;
+            /*
+                flex-wrap 
+                너비(row)나 높이(column)에 따라 
+                크기를 압축 줄바꿈 할지 결정하는 속성
+                nowrap(기본값), wrap, wrap-reverse
+                    압축
+                래핑된 요소는 자동 줄바꿈
+            */
+            flex-wrap:wrap;
+            flex-direction: row;
+            /* 수평정렬 */
+            justify-content: center;
+            /* 기본값 왼쪽으로 정렬(left) */
+            justify-content: flex-start;
+            /* right로 정렬 순서는 유지 */
+            justify-content: flex-end;
+            /* 동일한 간격으로 여백을 제공 좌우 끝 여백도 동일 */
+            justify-content: space-around;
+            /* 동일한 간격으로 여백을 제공하되 좌우 일정하게 배치 */
+            justify-content: space-between;
+            /* 동일한 간격으로 여백(좌우여백 포함)을 제공 하되 좌우 일정하게 배치 */
+            justify-content: space-evenly;
+            /* 수직정렬 */
+            align-items: center;
+            /* 
+                1. strech: 플렉스 요소의 높이가 플렉스 컨테이너 높이와 같게 변경된 뒤 연이어 배치
+            */
+            align-items:stretch;
+            /* 컨테이너 위쪽에 배치 */
+            align-items: flex-start;
+            /* 컨테이너 아래쪽에 배치 */
+            align-items: flex-end;
+            align-items: center;
+            /* 플렉스 컨테이너의 기준선에 배치 */
+            align-items: baseline;
+        }
+        .item{
+            width:80px;
+            height:80px;
+        }
+
+        .item01{
+            background-color:rgb(255, 146, 127);
+        }
+        .item02{
+            background-color:rgb(200, 81, 33);
+        }
+        .item03{
+            background-color:rgb(255, 242, 127);
+        }
+        .item04{
+            background-color:rgb(206, 255, 127);
+        }
+        .item05{
+            background-color:rgb(255, 46, 100);
+        }
+        .item06{
+            background-color:rgb(100, 30, 127);
+        }
+        .item07{
+            background-color:rgb(200, 146, 127);
+        }
+        .item08{
+            background-color:rgb(200, 146, 1);
+        }
+        .item09{
+            background-color:rgb(255, 10, 127);
+        }
+        .item10{
+            background-color:rgb(0, 146, 127);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div.wrapper>div.item.item$${$$}*10 -->
+    <div class="wrapper">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+        <div class="item item04">04</div>
+        <div class="item item05">05</div>
+        <div class="item item06">06</div>
+        <div class="item item07">07</div>
+        <div class="item item08">08</div>
+        <div class="item item09">09</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+package vo;
+
+/**
+ * 공지형 게시물 정보를 저장하는 class
+ */
+public class NoticeVO {
+	private int notice_num;
+	private String notice_category;
+	private String notice_author;
+	notice_title
+	notice_content
+	notice_date	
+}

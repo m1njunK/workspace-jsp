@@ -1,0 +1,42 @@
+<!-- webapp/jquery/00_hello_jquery.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--<script src="jquery-3.7.0.min.js"></script>-->
+<!-- jQuery를 페이지 호출 할때마다 항상 최신버전을 가지고 옴 -->
+
+<script src = "https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	window.onload = function(){
+		console.log('문서 준비 완료!1');
+	};
+	// jQuery 문법이라고 알려주는 접두어
+	// $ or jQuery
+	$(document).ready(function(){
+		console.log("문서 준비 완료!2");
+	});
+	
+	jQuery(document).ready(function(){
+		console.log('문서 준비 완료! jQuery');
+	});
+	
+	// jQuery 대체 기호를 _ 로 변경
+	let _ = $.noConflict();
+	
+	_(document).ready(function(){
+		console.log("준비완료 _ ");
+	});
+	
+	_(function(){
+		console.log("준비 완료!! func");
+	});
+</script>
+</head>
+<body>
+	<script>
+		console.log('문서 끝 출력!');
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>별 출력하기 2!</title>
+</head>
+<body>
+<script>
+    
+    var size = prompt("높이를 입력하세요!");
+    
+    /*
+        size = 6; 
+        *
+        **
+        ***
+        ****
+        *****
+        ******        
+    */
+    document.write(`<h3>높이가${size}인 삼각형</h3>`);
+    for (var i = 0; i < size; i++) {
+        for (var j = 0; j < i + 1; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>

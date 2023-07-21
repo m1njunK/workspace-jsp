@@ -1,0 +1,144 @@
+<!-- test_1_nav.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>navigation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        nav{
+            margin:0 auto;
+            width:1000px;
+        }
+
+        ul.normal{
+            list-style:none;
+        }
+
+        ul.normal li{
+            /* float:left; */
+            display: inline-block;
+            margin-left:-6px;
+            width:250px;
+            height:50px;
+            border:1px solid black;
+            /* 오른쪽 외곽선 삭제 */
+            border-right:none;
+            box-sizing: border-box;
+            text-align:center;
+            line-height:50px;
+            background-color:gray;
+            color:white;
+        }
+
+        ul.normal li:last-child{
+            border-right:1px solid black;
+        }
+
+        ul.normal li:hover{
+            cursor:pointer;
+            background-color:white;
+            color:gray;
+        }
+        
+        /* flex */
+        ul.flex{
+            display:flex;
+            /* 
+            	flex-direction , 
+            	flex-wrap 
+                동시지정
+            */
+            flex-flow: row nowrap;
+            border:1px solid black;
+        }
+
+        ul.flex li{
+            flex-grow:1;
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            border-right:1px solid black;
+        }
+
+        ul.flex li:last-child{
+            border-right:none;
+        }
+
+        ul.flex li a, 
+        table td a{
+            text-decoration:none;
+            color:white;
+        }
+
+        ul.flex li:hover, 
+        table td:hover{
+            background-color: white;
+            color:gray;
+        }
+
+        ul.flex li:hover a,
+        table td:hover a{
+            color:gray;
+        }
+
+        table{
+            width:1000px;
+            background-color:gray;
+            height:50px;
+            border-collapse: separate;
+            border-collapse: collapse;
+        }
+
+        table td{
+            text-align:center;
+            border:1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- nav>ul.normal>(li>{메뉴-$})*4 -->
+    <nav>
+        <ul class="normal">
+            <li>메뉴-1</li>
+            <li>메뉴-2</li>
+            <li>메뉴-3</li>
+            <li>메뉴-4</li>
+        </ul>
+    </nav>
+    <br style="clear:both;"/>
+    <hr/>
+    <br />
+    <!-- display:flex -->
+    <!-- nav>ul.flex>(li>a{menu-$})*4 -->
+    <nav>
+        <ul class="flex">
+            <li><a href="">menu-1</a></li>
+            <li><a href="">menu-2</a></li>
+            <li><a href="">menu-3</a></li>
+            <li><a href="">menu-4</a></li>
+        </ul>
+    </nav>
+    <br/>
+    <hr/>
+    <br/>
+    <!-- nav>table>tr>(td>a{MENU-$})*4 -->
+    <nav>
+        <table cellspacing="0">
+            <tr>
+                <td><a href="">MENU-1</a></td>
+                <td><a href="">MENU-2</a></td>
+                <td><a href="">MENU-3</a></td>
+                <td><a href="">MENU-4</a></td>
+            </tr>
+        </table>
+    </nav>
+</body>
+</html>

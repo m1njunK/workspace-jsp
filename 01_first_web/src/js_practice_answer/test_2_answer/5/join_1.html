@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입l</title>
+<link rel="stylesheet" href="./join.css">
+<script>
+	window.onload = function(){
+		var acceptBtn = document.getElementById("acceptBtn");
+		acceptBtn.addEventListener("click",function(){
+
+				let uid = document.getElementById("uid");
+				let upw = document.getElementById("upw");
+				let repw = document.getElementById("repw");
+				let birth = document.getElementById("birth");
+				let name = document.getElementById("name");
+				let phone = document.getElementById("phone");
+
+				if(uid.value == ""){
+					alert("아이디 값이 비어있습니다.");
+					uid.focus();
+					return;
+				}
+				
+				if(upw.value==""){
+					alert("비밀번호가 비어있습니다.");
+					upw.focus();
+					return;
+				}
+
+				if(repw.value==""){
+					alert("비밀번호 확인란이 비어있습니다.");
+					repw.focus();
+					return;
+				}
+
+				if(upw.value != repw.value){
+					alert("비밀번호가 일치하지 않습니다.");
+					upw.value = "";
+					repw.value="";
+					upw.focus();
+					return;
+				}
+
+				if(birth.value==""){
+					alert("생년월일이 비어있습니다.");
+					birth.focus();
+					return;
+				}
+				if(name.value==""){
+					alert("이름란이 비어있습니다.");
+					name.focus();
+					return;
+				}
+				if(phone.value==""){
+					alert("전화번호란이 비어있습니다.");
+					phone.focus();
+					return;
+				}
+				alert("회원 가입 성공!!!");
+			}
+		);
+	}
+</script>
+<body>
+	<article>
+		<form>
+			<table>
+				<tr>
+					<th colspan=2>회원가입</th>
+				</tr>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="uid"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="upw"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호확인</td>
+					<td><input type="password" id="repw"/></td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><input type="text" id="birth"/></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" id="name"/></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type="text" id="phone"/></td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<input type="button" id="acceptBtn" value="회원가입"/>
+						<input type="button" onclick="location.href='update.html'" value="회원정보수정"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</article>
+</body>
+</html>

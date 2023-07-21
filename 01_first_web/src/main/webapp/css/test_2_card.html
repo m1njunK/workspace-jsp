@@ -1,0 +1,49 @@
+<!-- test_2_card.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        div#img{
+            width:100px;
+            height:140px;
+            background-image: url(img/back.png);
+            background-repeat: no-repeat;
+            background-size:100px 140px;
+            background-size:90% 90%;
+            border:1px solid black;
+            background-position: center;
+            /*
+                auto : 원래 배경 이미지 크기(기본값)
+                contain : 지정한 요소안에 배경이미지가 다 들어오도록 확대/축소
+                cover : 지정 요소를 다 덮도록 배경이미지를 확대/축소
+            */
+            background-size: contain;
+            /* background-size: cover; 
+               height:50px;
+            */
+        }
+
+        div#img:hover{
+            background-image: url(img/spade.png);
+        }
+    </style>
+</head>
+<body>
+    <h3>:hover 활용</h3>
+    <hr/>
+    <!-- table>tr>td*2 -->
+    <table>
+        <tr>
+            <td>
+                마우스를 올리면 카드의 앞면이 보인다.
+            </td>
+            <td>
+                <!-- div#img -->
+                <div id="img"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

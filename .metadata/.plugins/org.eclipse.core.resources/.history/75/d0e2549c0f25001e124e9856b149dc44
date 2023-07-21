@@ -1,0 +1,11 @@
+package util;
+/**
+ * 검색 기능이 추가된
+ * 기준 class
+ */
+public class SearchCriteria {
+	
+	private String searchType;
+	private String searchValue;
+	
+}

@@ -1,0 +1,85 @@
+package service;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+import beans.MemberVO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import repositories.MemberDAO;
+import repositories.MemberDAOImpl;
+
+public class MemberServiceImpl implements MemberService{
+
+	MemberDAO md = new MemberDAOImpl();
+	
+	@Override
+	public void memberJoin(HttpServletRequest request, HttpServletResponse response){
+		
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		String name = request.getParameter("name");
+		int age = Integer.parseInt(request.getParameter("age"));
+		String gender = request.getParameter("gender");
+		
+		MemberVO m = new MemberVO(id,pass,name,age,gender);
+		
+		PrintWriter pw;
+		response.setContentType("text/html;charset=utf-8");
+		
+		try {
+			pw = response.getWriter();
+			
+			if(md.memberJoin(m)) {
+				pw.print("<script>");
+				pw.print("alert('회원가입 성공!');");
+				pw.print("location.href='login.mc';");
+				pw.print("</script>");	
+			}else {
+				pw.print("<script>");
+				pw.print("alert('회원가입 실패...');");
+				pw.print("location.href='join.mc';");
+				pw.print("</script>");
+			}
+		} catch (IOException e) {}
+	}
+
+	@Override
+	public boolean memberLogin(HttpServletRequest request, HttpServletResponse response) {
+		
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		boolean loginCheck = false;
+		try {
+			PrintWriter pw = response.getWriter();
+			MemberVO m = md.memberLogin(id, pass);
+			
+			if(m != null) {
+				pw.print("<script>");
+				pw.print("alert('로그인 성공!');");
+				pw.print("</script>");	
+				return true;
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return loginCheck;
+	}
+
+	@Override
+	public void memberUpdate(HttpServletRequest request, HttpServletResponse response) {
+
+	}
+
+	@Override
+	public void logOut(HttpServletRequest request, HttpServletResponse response) {
+
+	}
+
+	@Override
+	public void withDraw(HttpServletRequest request, HttpServletResponse response) {
+
+	}
+		
+}

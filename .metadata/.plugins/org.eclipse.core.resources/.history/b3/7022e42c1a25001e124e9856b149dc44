@@ -1,0 +1,15 @@
+package vo;
+
+/**
+ * 질문과 답변 게시글 정보를 저장할 Bean class
+ */
+public class QnABoardVO {
+	private int qna_num;
+	private String qna_name;
+	private String qna_title;
+	private String qna_content;
+	private int qna_writer_num;
+	private int qna_readcount;
+	private Date qna_date;
+	
+}

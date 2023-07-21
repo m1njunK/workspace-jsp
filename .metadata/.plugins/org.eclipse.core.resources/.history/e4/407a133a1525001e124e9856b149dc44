@@ -1,0 +1,9 @@
+package util;
+
+public class SearchPageMaker extends PageMaker{
+
+	public SearchPageMaker() {
+		super(new SearchCriteria(),0);
+	}
+	
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입l</title>
+<link rel="stylesheet" href="./join.css">
+</head>
+<body>
+	<article>
+		<form>
+			<table>
+				<tr>
+					<th colspan=2>회원가입</th>
+				</tr>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="uid" placeholder="아이디"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="upw"  placeholder="비밀번호"/></td>
+				</tr>
+				<tr>
+					<td>비밀번호확인</td>
+					<td><input type="password" id="repw" placeholder="비밀번호확인"/></td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><input type="text" placeholder="생년월일"/></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" placeholder="이름"/></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type="text" placeholder="전화번호"/></td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<input type="submit" value="회원가입"/>				
+						<input type="button" onclick="location.href='update.html'" value="회원정보수정"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</article>
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<script>
+		$("input[type='submit']").click(function(){
+			// button 과 submit이 아닌 요소들만 순회
+			$("input").not("[type='button']").not("[type='submit']").each(function(){
+				// val == 요소의 value 값 
+				if(!$(this).val()){
+					console.log(this.placeholder+' 공백');
+					console.log($(this).parent());
+					console.log($(this).parent().parent());
+					console.log($(this).parent().parent().first());
+					console.log($(this).parent().parent().children().first());
+					let text = $(this).parent().parent().children().first().text();
+					// 부모의 이전 형제 요소
+					text = $(this).parent().prev().text();
+					alert(text+"가 비어있습니다.");
+					this.focus();
+					return false;
+				}
+
+				let pw  = $("input[type='password']");
+
+				if($(pw[0]).val() !== $(pw[1]).val()){
+					alert("비밀번호가 일치하지않습니다.");
+					$(pw[0]).val("");
+					$(pw[1]).val("");
+					$(pw[0]).focus();
+					return false;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

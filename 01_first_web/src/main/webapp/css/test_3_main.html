@@ -1,0 +1,117 @@
+<!-- test_3_main.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        body{
+            text-align:left;
+            color:#fff;
+            width:900px;
+            margin:0 auto;
+        }
+
+        div#wrapper{
+            width:100%;
+            /* 내부에 컨텐츠가 없더라도 최소높이를 300px을 가짐. */
+            min-height:300px;
+        }
+
+        header, footer, nav, aside, section{
+            border:1px solid gray;
+            margin:5px;
+            padding:10px;
+        }
+
+        header{
+            height:50px;
+            background-color:skyblue;
+        }
+
+        nav, section, aside{
+            float:left;
+            height:500px;
+        }
+
+        nav{
+            background-color:pink;
+            width:100px;
+        }
+
+        nav ol{
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        nav ol li{
+            text-align:center;
+            width:100%;
+        }
+
+        nav ol li a{
+            text-decoration: none;
+            color:black;
+        }
+
+        nav ol li:hover a{
+            color:white;
+        }
+
+        section{
+            background-color: lightgreen;
+            width:604px;
+        }
+
+        aside{
+            background-color: pink;
+            width:100px;
+        }
+        
+        article{
+            width:90%;
+            margin:20px;
+            background-color:#999;
+        }
+
+        footer{
+            height:50px;
+            background-color: skyblue;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- div#wrapper -->
+    <div id="wrapper">
+        <!-- header>p{header} -->
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <nav>
+                <p>nav</p>
+                <!-- ol>(li>a{menu-$})*3 -->
+                <ol>
+                    <li><a href="">menu-1</a></li>
+                    <li><a href="">menu-2</a></li>
+                    <li><a href="">menu-3</a></li>
+                </ol>
+            </nav>
+            <section>
+                <p>section</p>
+                <article>
+                    <p>article</p>
+                    <!-- p>lorem100 -->
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum dolores accusantium sint porro veritatis maiores, quam eligendi inventore assumenda deserunt pariatur quaerat quis reprehenderit voluptate dolor quisquam quidem, aspernatur tempore quas, fuga natus explicabo. Odit rerum quis sit pariatur hic numquam illum vitae. Ullam aut aliquid natus voluptatem temporibus doloribus. Odit tempora, culpa fugit eveniet ratione labore laborum nam explicabo fuga nulla illo ab. Nobis, tempora quia. Eum quos consectetur corporis ipsa eos vitae labore velit corrupti minus doloremque excepturi magni eaque mollitia dicta officiis odit officia eligendi, alias vero cupiditate temporibus sit quam deserunt fugit! A doloremque esse cum!</p>
+                </article>
+            </section>
+            <aside>
+                <p>aside</p>
+            </aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

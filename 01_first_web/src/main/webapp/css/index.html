@@ -1,0 +1,78 @@
+<!-- webapp/css/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style>
+	/*
+		INTERNAL
+		디자인이 적용될 태그 요소를 구분하는 SELECTOR
+		Type(태그이름),
+		. : class(태그요소에 class속성으로 부여된 이름),
+		# : id(태그요소에 id속성으로 부여된 이름)
+	*/
+	
+	h1{
+		color:blue;
+	}
+	
+</style>
+<link rel="stylesheet" href="test.css"/>
+<style>
+	*{
+		color: greenyellow;
+	}
+	
+	#bg{
+		background-color: beige;
+	}
+	
+	#color{
+		color: blue;
+	}
+	
+	.size{
+		font-size: 50px;
+	}
+	
+	.color{
+		color: pink;
+	}
+	
+	h2{
+		background-color: aqua;
+	}
+	
+	/*
+		inline > id > class > type
+	*/
+	
+</style>
+</head>
+<body>
+	<!--
+		TAG 요소에 디자인(스타일)을 적용하는 방식
+		INLINE - 태그 요소에 직접 style 속성 적용
+		내부 스타일 시트
+		INTERNAL - 동일 페이지에서 style 태그를 이용하여 스타일 적용
+		외부 스타일 시트
+		EXTERNAL - 외부에 css 스타일을 적용한 파일을 통해 디자인 적용
+	-->
+	<!--h1{스타일 적용}*5-->
+	<h1 style="color:blueviolet">INLINE 스타일 적용</h1>
+	<h1>스타일 적용</h1>
+	<h1>스타일 적용</h1>
+	<h1>스타일 적용</h1>
+	<h1>스타일 적용</h1>
+	
+	<hr/>
+	
+	<h1>Type 선택자</h1>
+	<!--h2{선택자 적용}*4-->
+	<h2 id="bg">선택자 적용</h2>
+	<h2 id="color" class="color">선택자 적용</h2>
+	<h2 id="color bg">선택자 적용</h2>
+	<h2 style="color: black;" id="color" class="size color">선택자 적용</h2>
+</body>
+</html>

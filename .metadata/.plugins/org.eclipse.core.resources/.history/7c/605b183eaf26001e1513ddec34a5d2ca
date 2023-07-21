@@ -1,0 +1,112 @@
+package repositories;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import beans.MemberVO;
+import util.DBCPUtil;
+
+public class MemberDAOImpl implements MemberDAO {
+
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	@Override
+	public boolean memberJoin(MemberVO member) {
+		
+		conn = DBCPUtil.getConnection();
+		int result = 0;
+		
+		String sql = "INSERT INTO mvc_member (id,pass,name,age,gender) VALUES(?,?,?,?,?)";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member.getId());
+			pstmt.setString(2, member.getPass());
+			pstmt.setString(3, member.getName());
+			pstmt.setInt(4, member.getAge());
+			pstmt.setString(5, member.getGender());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBCPUtil.close(pstmt,conn);
+		}
+		if(result > 0) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public MemberVO memberLogin(String id, String pass) {
+		
+		MemberVO m = null;
+		conn = DBCPUtil.getConnection();
+		
+		String sql = "SELECT * FROM mvc_member WHERE id = ? AND pass = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pass);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				m = new MemberVO();
+				m.setNum(rs.getInt(0));
+				m.setId(rs.getString(1));
+				m.setPass(rs.getString(2));
+				m.setId(rs.getString(1));
+				m.setId(rs.getString(1));
+				m.setId(rs.getString(1));
+				m.setId(rs.getString(1));
+				m.setId(rs.getString(1));
+				m.setId(rs.getString(1));
+				
+			}
+			
+			num INT primary key auto_increment,
+			id VARCHAR(50) UNIQUE NOT NULL,
+			pass VARCHAR(50) NOT NULL,
+			name VARCHAR(50),
+			age INT(3) default 0,
+			gender VARCHAR(10),
+			joinYN char(1) DEFAULT 'Y',
+			regdate TIMESTAMP default now(),
+			updatedate TIMESTAMP default now()
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBCPUtil.close(conn,pstmt,rs);
+		}
+		return m;
+	}
+
+	@Override
+	public boolean memberUpdate(MemberVO member) {
+		
+		return false;
+	}
+
+	@Override
+	public MemberVO getMemberById(String id) {
+		
+		return null;
+	}
+
+	@Override
+	public void withDrawMember(int num) {
+		
+
+	}
+
+}

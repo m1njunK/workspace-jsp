@@ -1,0 +1,63 @@
+<!-- webapp/html/input.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!--form>table[border="1"]>tr>th[colspan="2"]-->
+	<!--form>table[border="1"]>(tr>th[colspan="2]{회원가입})((tr>td*2)*6)(tr>th[colspan="2"]>input[type="submit" value="제출"])-->
+	<form action="index.html" method="get">
+		<table border="1">
+			<tr>
+				<th colspan="2">회원가입</th>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td>
+					<input type="email" name="email" value="neo.naver.com" disabled/>
+				</td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td>
+					<input type="text" name="name" value="네오" readonly/>
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td>
+					<input type="password" name="pw" value="12345"/>
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td>
+					<input type="password" value="12345"/>
+				</td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td>
+					<!-- input[type="radio" name="gender"]*2 -->
+					
+					<input type="radio" id="male" class="testRed blackBlack" name="gender" value="male"/> 
+					<label for="male">남성</label>
+					
+					<label>
+						<input type="radio" id="female" name="gender" value="female" checked/> 여성
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td><input type="number" placeholder="숫자를 입력하세요" required></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="제출"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

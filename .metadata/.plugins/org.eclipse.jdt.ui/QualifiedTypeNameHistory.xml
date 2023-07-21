@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.StringReader"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="util.SearchCriteria"/>
+    <fullyQualifiedTypeName name="service.MemberService"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="service.MemberServiceImpl"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
+    <fullyQualifiedTypeName name="repositories.MemberDAO"/>
+    <fullyQualifiedTypeName name="repositories.MemberDAOImpl"/>
+    <fullyQualifiedTypeName name="beans.MemberVO"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Cookie"/>
+    <fullyQualifiedTypeName name="repositories.ManagementDAO"/>
+    <fullyQualifiedTypeName name="repositories.ManagementDAOImpl"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="util.Criteria"/>
+    <fullyQualifiedTypeName name="util.DBCPUtil"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="service.ManagementService"/>
+    <fullyQualifiedTypeName name="service.ManagementServiceImpl"/>
+</qualifiedTypeNameHistroy>

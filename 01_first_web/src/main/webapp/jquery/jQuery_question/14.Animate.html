@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	/**
+	 * 시점 : run button click 시
+	 * 대상 : div#target
+	 * 기능 : div#target 1.5초에 걸쳐 크기 변경 (애니메이션 효과) 
+	 * 함수 : animate()
+	 */
+
+	$(function(){
+		$('input').click(function(){
+			$('#target').animate(
+				{width:'1000px',height:'1000px',rotate:'1800deg',borderRadius : '500px'},
+				5000
+			);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<div id="target"
+		style="color: rgb(255, 255, 255); width: 150px; height: 100px; float: left; border: 1px solid rgb(34, 34, 34); background-color: rgb(143, 188, 143); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">
+		#target<br>
+	</div>
+	<input type="button" value="run"/>
+</body>
+</html>

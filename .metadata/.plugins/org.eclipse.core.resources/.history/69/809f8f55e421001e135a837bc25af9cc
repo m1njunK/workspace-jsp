@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jstlFn.jsp</title>
+</head>
+<body>
+	<!-- pageContext.setAttribute("test","Hello, Java Server Pages!") -->
+	<c:set var="test" value="Hello, Java Server Pages!"/>
+	EL test : ${test} <br/>
+	toUpperCase : ${fn:toUpperCase(test)} <br />
+	toLowerCase : ${fn:toLowerCase(test)} <br />
+	<c:set var="img" value="image/png"/>
+	<c:if test="${fn:startsWith(img,'image')}">
+		이미지 파일입니다 <br /> 
+	</c:if>
+	<c:set var="text" value="read.txt"/>
+	<c:if test="${!fn:endsWith(text,'.txt')}">
+		텍스트 파일이 아닙니다. <br />
+	</c:if>
+	<c:choose>
+		<c:when test="${fn:endsWith(text,'.txt')}">
+			텍스트 파일입니다. <br/>
+		</c:when>
+		<c:otherwise>
+			텍스트 파일이 아입니다. <br />
+		</c:otherwise>
+	</c:choose>
+	<hr />
+	<%-- <c:set var="test" value="Hello, Java Server Pages!"/> --%>
+	contains : ${fn:contains(test,'java')} <br />
+	containsIgnoreCase : ${fn:containsIgnoreCase(test,'java')} <br />
+	<hr />
+	indexOf : ${fn:indexOf(test,'java')} <br />
+	substringBefore : ${fn:substringBefore(test,'Java')} <br />
+	substring : ${fn:substring }
+	substringAfter : ${fn:substringAfter(test,'Java')} <br />
+</body>
+</html>

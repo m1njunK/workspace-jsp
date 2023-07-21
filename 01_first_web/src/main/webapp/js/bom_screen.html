@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 브라우저가 모두 준비되었을때 실행될 함수
+	window.onload = function(){
+		// window.screen
+		let widthWin = screen.availWidth;
+		let heightWin = screen.availHeight;
+		console.log("사용가능한 화면 너비", widthWin);
+		console.log("사용가능한 화면 높이", heightWin);
+		
+		let width = screen.width;
+		let height = screen.height;
+		console.log("화면 너비", width);
+		console.log("화면 높이", height);
+		
+		width = document.body.clientWidth;
+		heigth = document.body.clientHeight;
+		console.log("문서 안쪽의 너비", width);
+		console.log("문서 안쪽의 높이", heigth);
+		
+		let i = 0;
+		// 윈도우에서 스크롤 변경이 되면 수행할 함수
+		window.onscroll = function(){
+			// y scroll 위치 정보
+			let wy = window.scrollY; 
+			// 문서의 현재 전체 높이
+			let dh = document.body.clientHeight;
+			// 브라우저가 출력할 수 있는 최대 높이
+			let wh = window.screen.height;
+			console.log(wy,dh,wh);
+			let scrollHeight = wy + wh;
+			if(scrollHeight >= dh){
+				console.log('body에 요소 추가');
+				let elem = document.createElement("div");
+				elem.style.height = "500px";
+				elem.style.border = "1px solid red";
+				elem.innerHTML = "<h1>"+i+"</h1>";
+				document.body.appendChild(elem);
+				i++;
+			}
+		};
+	}
+</script>
+</head>
+<body>
+	<h3><a href="bom_location.html">location</a></h3>
+	<div style="height: 1600px;width: 100%;border: 1px solid violet;"></div>
+</body>
+</html>

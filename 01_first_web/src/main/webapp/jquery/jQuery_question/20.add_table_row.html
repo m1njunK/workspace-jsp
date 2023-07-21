@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+/*
+	
+	시점 : run button click 시
+	기능 : 입력태그에 작성된 제목,내용,작성자를 
+	       table 에 행을 생성하여 추가
+	함수 : val() , append()
+*/
+		$(function(){
+			
+			$("#title").focus();
+			
+			/*
+				$("title").keydoun((e)=>{
+					let keyName = e.key;
+					let keyCode = e.keyCode;
+					console.log(`key : ${keyname}, keyCode : ${keyCode}`);
+					if(keyCode == 13){
+						$("#content").focus();
+					}
+				});
+			*/
+			
+			$("#title").keydown((e)=>{
+				if(e.keyCode == 13){
+					if($("#content").val() == ""){
+						$("#content").focus();
+					}else{
+						$("#btn").click();
+					}
+				}
+			});
+			
+			$("#content").keydown((e)=>{
+				if(e.keyCode == 13){
+					if($("#owner").val() == ""){
+						$("#owner").focus();
+					}else{
+						$("#btn").click();
+					}
+				}
+			});
+			
+			$("#owner").keydown((e)=>{
+				if(e.keyCode == 13){
+					// $("#btn").click();
+					document.querySelector("#btn").click();
+				}
+			});
+			
+			// btn click event
+			$('#btn').click(
+				function(){
+					let title = $('#title').val();
+					let content = $('#content').val();
+					let owner = $('#owner').val();
+						
+					if(title != "" && content != "" && owner != ""){
+						$('#table').append(
+							`<tr>
+								<td>${title}</td>
+								<td>${content}</td>
+								<td>${owner}</td>
+							</tr>`
+						);						
+							$("input[type='text']").val("");
+							$("#title").focus();
+					} else{
+						if(title == ""){
+							alert("제목을 입력하세요");
+							$("#title").focus();	
+						}else if(content == ""){
+							alert("내용을 입력하세요");
+							$("#content").focus();
+						}else if(owner == ""){
+							alert("작성자를 입력하세요");
+							$("#owner").focus();
+						}
+						
+					}
+				});
+		});
+	</script>
+</head>
+<body>
+	제목 : <input type="text" name="title"  id="title"/><br />
+	내용 : <input type="text" name="content" id="content" /><br />
+	작성자: <input type="text" name="owner" id="owner" /><br />
+	<input type="button" name="btn" id="btn" value="run" />
+	<hr/>
+	<table id="table" width="50%" border="1">
+		<tr>
+			<th>제목</th>
+			<th>내용</th>
+			<th>작성자</th>
+		</tr>
+	</table>
+</body>
+</html>

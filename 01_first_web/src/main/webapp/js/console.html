@@ -1,0 +1,43 @@
+<!-- webapp/js/console.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.console.log('기본');
+	var a = "hello";
+	var b = 3.141592;
+	var c = false;
+	
+	console.log(a + b + c);
+	console.log(a,b,c);
+	
+	console.log('%s 는 문자열 %d는 수치형', a, b);
+	console.log(`${a}는 문자열 ${b}는 수치형`);
+	
+	console.info('정보');
+	console.warn('경고');
+	console.error('오류');
+	
+	var obj = {
+		a : 'a',
+		b : 'b'
+	};
+	console.log("obj : " + obj); // obj.toString() <- type 반환
+	console.log(obj);
+	console.log("obj : " , obj);
+	
+	// timer
+	// 코드 수행 시간을 확인할 때 유용
+	// 시간 측정 시작
+	console.time('타이머1'); // 타이머를 구분하는 키값
+	for(let i = 0; i < 1000000; i++);
+	console.timeEnd('타이머1');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

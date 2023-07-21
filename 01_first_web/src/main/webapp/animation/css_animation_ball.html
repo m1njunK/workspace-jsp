@@ -1,0 +1,47 @@
+<!-- webapp/animation/css_animation_ball.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#ball{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: red;
+		border-radius: 10px;
+		bottom:0px;
+		/* 적용할 animation keyframes*/
+		animation-name: bounce;
+		/* animation 효과 반복 횟수 */
+		animation-iteration-count: infinite;
+		/* keyframes 지속 시간 */
+		animation-duration: 1s;
+	}
+	
+	/*
+		지정된 시간에 따라 할 동작을 정의하는 쿼리
+	*/
+	@keyframes bounce{
+		from, to{
+			bottom: 0px;
+			/* 천천히 끝 */
+			animzation-timing-function: ease-out;
+		}		
+	
+		50%{
+			bottom: 200px;
+			/* 천천히 시작 */
+			animation-timing-function: ease-in;
+		}
+	}
+	
+</style>
+</head>
+<body>
+	<div id="ball">
+		
+	</div>
+</body>
+</html>

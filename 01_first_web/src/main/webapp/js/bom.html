@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		Browser Object Model(BOM)
+		window - Main 브라우저 윈도우를 제어하기 위한 자바스크립트에서
+				 제공 하는 내장 객체
+		window.navigator - 현재 페이지에 접근한 사용자의 브라우저 정보
+		window.screen - 현재 페이지에 접근한 사용자 화면에 대한 정보
+					  - 운영체제의 사용자 모니터 정보와 브라우저 화면 정보
+		window.history - 사용자가 방문한 URL 정보
+		window.location - 현재 주소표시줄의 URL에 대한 정보
+		window.frames - 브라우저 윈도우를 구성하고 있는 뼈대 frame에 대한 정보
+		window.document - 메인 브라우저에 표시된 HTML 문서에 대한 정보
+	*/
+	// 전역객체인 window는 생략 가능
+	console.log(navigator);
+	for(let key in navigator){
+		let value = navigator[key];
+		document.write(key + " : " + value + "<br>");
+	}
+	
+	let is_Mobile = isMobile();
+	alert(is_Mobile);
+	function isMobile(){
+		let user = navigator.userAgent.toLowerCase();
+		if(user.indexOf("iphone") > -1 ||
+		   user.indexOf("android") > -1 ||
+		   user.indexOf("ipod") > -1 ||
+		   user.indexOf("ipad") > -1){
+			   return "모바일로 접속 하셨습니다.";
+		}else{
+			return "PC로 접속하셨습니다.";
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<h3><a href="bom_screen.html">screen</a></h3>
+</body>
+</html>
