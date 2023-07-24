@@ -6,13 +6,13 @@
 <jsp:include page="../../common/header.jsp" />
 <section class="wrap">
 	<h1> 글 작성</h1>
-	<form action="qna_write_submit.jsp" method="POST">
-		<input type="hidden" name="qna_writer_num" value="${member.u_num}"/>
+	<form action="writeSubmit.qna" method="POST">
+		<input type="hidden" name="qna_writer_num" value="${member.num}"/>
 		<table>
 			<tr>
 				<td>작성자</td>
 				<td>
-					<input type="text" name="qna_name" value="${member.u_name}" required />
+					<input type="text" name="qna_name" value="${member.name}" required />
 				</td>
 			</tr>
 			<tr>
@@ -24,14 +24,6 @@
 			<tr>
 				<td>
 					글 내용
-				</td>
-				<td>
-					<textarea name="qna_content" cols="50" rows="10" required></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					작성시간
 				</td>
 				<td>
 					<textarea name="qna_content" cols="50" rows="10" required></textarea>

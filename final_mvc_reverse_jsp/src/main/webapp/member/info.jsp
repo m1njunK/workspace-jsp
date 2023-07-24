@@ -54,7 +54,7 @@
 		}
 
 		if (confirm('정말로 탈퇴 하시겠습니까?')) {
-			location.href = 'withdraw.jsp';
+			location.href = 'member/withdraw.jsp';
 		}
 	}
 </script>

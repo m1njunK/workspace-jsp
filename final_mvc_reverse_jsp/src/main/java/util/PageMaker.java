@@ -167,7 +167,6 @@ public class PageMaker {
 				+ ", maxPage=" + maxPage + ", cri=" + cri + "]";
 	}
 	
-	
 	public String makeQuery(int page) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("?");

@@ -26,4 +26,6 @@ public interface ManagementDAO {
 	 */
 	int deleteMember(int num);
 
+	MemberVO getMember(int num);
+	
 }

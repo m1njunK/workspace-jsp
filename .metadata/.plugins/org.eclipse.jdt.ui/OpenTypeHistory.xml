@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;repositories{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1689811571794"/>
+    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;repositories{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1690157803228"/>
     <typeInfo handle="=final_mvc_reverse_jsp/C:\/workspace\/jsp\/tomcat\/lib\/catalina-tribes.jar=/javadoc_location=/http:\/\/tomcat.apache.org\/tomcat-10.1-doc\/api\/=/=/owner.project.facets=/jst.web=/&lt;org.apache.catalina.tribes(ManagedChannel.class[ManagedChannel" modifiers="1537" timestamp="1685697120000"/>
-    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;service{ManagementService.java[ManagementService" modifiers="513" timestamp="1689810705283"/>
-    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;repositories{ManagementDAO.java[ManagementDAO" modifiers="513" timestamp="1689811561393"/>
+    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;service{ManagementService.java[ManagementService" modifiers="513" timestamp="1690157803272"/>
+    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;repositories{ManagementDAO.java[ManagementDAO" modifiers="513" timestamp="1690157803214"/>
+    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;service{NoticeService.java[NoticeService" modifiers="513" timestamp="1690157803295"/>
+    <typeInfo handle="=final_mvc_reverse_jsp/src\/main\/java&lt;repositories{NoticeDAO.java[NoticeDAO" modifiers="513" timestamp="1690157803235"/>
 </typeInfoHistroy>

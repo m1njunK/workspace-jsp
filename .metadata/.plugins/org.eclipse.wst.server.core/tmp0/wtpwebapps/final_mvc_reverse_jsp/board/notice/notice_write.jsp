@@ -2,14 +2,14 @@
 	pageEncoding="UTF-8"%>
 <jsp:include page="../../common/header.jsp" />
 <section class="wrap">
-	<form action="#" method="post">
+	<form action="noticeWriteSubmit.do" method="post">
 		<table class="list">
 			<tr>
 				<th colspan=2><h1>공지글 작성</h1></th>
 			</tr>
 			<tr>
 				<td>작성자</td>
-				<td>${member.u_id}</td>
+				<td>${member.id}</td>
 			</tr>
 			<tr>
 				<td>카테고리</td>

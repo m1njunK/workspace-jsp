@@ -11,10 +11,12 @@ CREATE TABLE mvc_member(
 );
 
 SELECT * FROM mvc_member;
+commit;
 
 -- 관리자 계정 추가
 INSERT INTO mvc_member(id,pass,name,age,gender) 
 VALUES('admin','admin','MASTER',0,'male');
+
 
 
 -- 회원탈퇴 시
@@ -68,10 +70,11 @@ CREATE TABLE IF NOT EXISTS qna_board(
 	qna_title VARCHAR(50) NOT NULL,				-- 글 제목
 	qna_content TEXT NOT NULL,					-- 글 내용
 	qna_re_ref INT NOT NULL DEFAULT 0 ,			--
-	qna_re_lev INT NOT NULL,					-- 
+	qna_re_lev INT NOT NULL DEFAULT 0,					-- 
 	qna_re_seq INT NOT NULL DEFAULT 0,			--
 	qna_writer_num INT NOT NULL,				-- 글작성자 회원 번호
 	qna_readcount INT DEFAULT 0,				-- 조회수
+	qna_delete char(1) DEFAULT 'N',
 	qna_date TIMESTAMP DEFAULT now()			-- 글 작성 시간
 );
 
@@ -94,14 +97,13 @@ SELECT * FROM qna_board;
 
 DESC qna_board;
 
+
 -- 게시글 삭제 여부 수정
 ALTER TABLE qna_board qna_delete char(1) DEFAULT 'N' AFTER qna_readcount;
-
 
 -- sample data 추가
 INSERT INTO qna_board(qna_name,qna_title,qna_content,qna_writer_num) 
 SELECT qna_name,qna_title,qna_content,qna_writer_num FROM qna_board;
-
 
 commit;
 
@@ -124,8 +126,6 @@ WHERE qna_num = LAST_INSERT_ID();
 
 commit;
 
-
-
-
+drop table qna_board
 
 

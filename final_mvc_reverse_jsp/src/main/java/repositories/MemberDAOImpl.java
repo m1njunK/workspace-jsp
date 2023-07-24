@@ -128,6 +128,8 @@ public class MemberDAOImpl implements MemberDAO {
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBCPUtil.close(pstmt,conn);
 		}
 		
 	}

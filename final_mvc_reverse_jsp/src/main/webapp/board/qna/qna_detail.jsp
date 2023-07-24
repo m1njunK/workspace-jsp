@@ -24,13 +24,13 @@
 		<tr>
 			<td colspan=2>
 			<c:if test="${!empty member}">
-				<a href="qna_reply.jsp?qna_num=${qna.qna_num}">[답글]</a>
-				<c:if test="${qna.qna_writer_num eq member.u_num}">
-					<a href="qna_update.jsp?qna_num=${qna.qna_num}">[수정]</a>
-					<a href="qna_delete.jsp?qna_num=${qna.qna_num}">[삭제]</a>
+				<a href="reply.qna?qna_writer_num=${member.num}&qna_re_ref=${qna.qna_re_ref}&qna_re_lev=${qna.qna_re_lev}&qna_re_seq=${qna.qna_re_seq}">[답글]</a>
+				<c:if test="${qna.qna_writer_num eq member.num}">
+					<a href="update.qna?qna_num=${qna.qna_num}">[수정]</a>
+					<a href="delete.qna?qna_num=${qna.qna_num}">[삭제]</a>
 				</c:if>
 			</c:if> 
-			<a href="qna_list.jsp">[목록]</a></td>
+			<a href="boardList.qna">[목록]</a></td>
 		</tr>
 	</table>
 </section>

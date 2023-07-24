@@ -54,7 +54,6 @@ public class MemberServiceImpl implements MemberService{
 		
 		MemberVO m = md.memberLogin(id, pass);
 		
-		
 		if(m != null) {
 			if(remember != null) {
 				Cookie c = new Cookie("remember",id);
@@ -79,6 +78,10 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void logOut(HttpServletRequest request, HttpServletResponse response) {
 		request.getSession().removeAttribute("member");
+		Cookie c = new Cookie("remember","");
+		c.setMaxAge(0);
+		c.setPath("/");
+		response.addCookie(c);
 		request.setAttribute("message", "로그아웃 완료");
 	}
 
@@ -87,6 +90,10 @@ public class MemberServiceImpl implements MemberService{
 		MemberVO m = (MemberVO) request.getSession().getAttribute("member");
 		int num = m.getNum();
 		md.withDrawMember(num);
+		Cookie c = new Cookie("remember","");
+		c.setMaxAge(0);
+		c.setPath("/");
+		response.addCookie(c);
 		request.getSession().removeAttribute("member");
 		request.setAttribute("message", "회원탈퇴 완료");
 	}

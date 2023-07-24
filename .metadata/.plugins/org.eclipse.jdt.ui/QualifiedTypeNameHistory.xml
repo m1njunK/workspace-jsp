@@ -11,7 +11,6 @@
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="util.SearchCriteria"/>
     <fullyQualifiedTypeName name="service.MemberService"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="service.MemberServiceImpl"/>
@@ -20,14 +19,21 @@
     <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
     <fullyQualifiedTypeName name="repositories.MemberDAO"/>
     <fullyQualifiedTypeName name="repositories.MemberDAOImpl"/>
-    <fullyQualifiedTypeName name="beans.MemberVO"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.Cookie"/>
-    <fullyQualifiedTypeName name="repositories.ManagementDAO"/>
-    <fullyQualifiedTypeName name="repositories.ManagementDAOImpl"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="util.Criteria"/>
-    <fullyQualifiedTypeName name="util.DBCPUtil"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="service.ManagementService"/>
+    <fullyQualifiedTypeName name="repositories.ManagementDAO"/>
+    <fullyQualifiedTypeName name="beans.MemberVO"/>
     <fullyQualifiedTypeName name="service.ManagementServiceImpl"/>
+    <fullyQualifiedTypeName name="repositories.ManagementDAOImpl"/>
+    <fullyQualifiedTypeName name="util.Criteria"/>
+    <fullyQualifiedTypeName name="util.PageMaker"/>
+    <fullyQualifiedTypeName name="repositories.NoticeDAO"/>
+    <fullyQualifiedTypeName name="beans.NoticeVO"/>
+    <fullyQualifiedTypeName name="util.DBCPUtil"/>
+    <fullyQualifiedTypeName name="repositories.NoticeDAOImpl"/>
+    <fullyQualifiedTypeName name="util.SearchCriteria"/>
+    <fullyQualifiedTypeName name="util.SearchPageMaker"/>
+    <fullyQualifiedTypeName name="service.NoticeServiceImpl"/>
 </qualifiedTypeNameHistroy>

@@ -30,6 +30,8 @@ public class MemberController extends HttpServlet {
 		// 요청에 따라 데이터의 처리가 필요하다면 서비스로 처리 요청
 		String command = request.getRequestURI().substring(request.getContextPath().length() + 1);
 		
+		System.out.println(command);
+		
 		if(command.equals("join.mc")) {
 			view = "/member/join.jsp";
 		}
@@ -54,6 +56,10 @@ public class MemberController extends HttpServlet {
 			ms.withDraw(request, response);
 			view = "/index.jsp";
 		}
+		if(command.equals("info.mc")) {
+			view="/member/info.jsp";
+		}
+		
 		
 		// view 정보가 존재할 시 forward로 페이지 이동
 		if (view != null && !view.equals("")) {
