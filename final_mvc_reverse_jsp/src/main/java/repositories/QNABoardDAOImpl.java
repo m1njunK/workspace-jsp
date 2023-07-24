@@ -146,10 +146,11 @@ public class QNABoardDAOImpl implements QNABoardDAO {
 	public void boardReplySubmit(BoardVO board) {
 		
 		String sql = "UPDATE qna_board SET qna_re_seq = qna_re_seq + 1 WHERE qna_re_ref = ? AND qna_re_seq > ?";
+		System.out.println(board);
 		conn = DBCPUtil.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, board.getQna_re_ref()-1);
+			pstmt.setInt(1, board.getQna_re_ref());
 			pstmt.setInt(2, board.getQna_re_seq()-1);
 			pstmt.execute();
 		} catch (SQLException e) {
